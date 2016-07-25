@@ -172,7 +172,7 @@
 
                 Tools.LoadFile(rootUrl + sceneFilename, data => {
                     importMeshFromData(data);
-                }, progressCallBack, database);
+                }, progressCallBack, database, false, onerror);
             };
 
             if (scene.getEngine().enableOfflineSupport && !(sceneFilename.substr && sceneFilename.substr(0, 5) === "data:")) {
